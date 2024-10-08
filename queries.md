@@ -14,8 +14,8 @@ query: {name: "Babelgum"}
 **2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
 
 <!-- Your Query Goes Here -->
-Query: {number_of_employees: {$gt: 500} }
-Sort: {number_of_employees: 1}
+Query: {number_of_employees: {$gt: 5000} }
+Sort: {number_of_employees: -1}
 Limit: 20
 
 
