@@ -77,6 +77,9 @@ Limit: 1000
 **10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
 <!-- Your Query Goes Here -->
+Query: {founded_day: {$lte: 7}}
+Sort: {"acquisition.price_amount": 1}
+Limit: 10
 
 <br>
 
@@ -85,6 +88,9 @@ Limit: 1000
 **1. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.**
 
 <!-- Your Query Goes Here -->
+Query: {"acquisition.acquired_year": {$gt: 2010}}
+Project: {name: 1, acquisition: 1}
+Sort: {"acquisition.price_amount": -1}
 
 <br>
 
